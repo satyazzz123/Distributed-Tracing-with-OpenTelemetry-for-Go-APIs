@@ -1,6 +1,10 @@
 # Distributed Tracing with OpenTelemetry for Go APIs
 This project is a simple Go application providing a REST API to manage users. The application uses MongoDB as a database and includes OpenTelemetry tracing to send trace data to a distributed tracing backend via an OpenTelemetry Collector.
 
+# Architecture
+## Full scale architecture
+![alt text](image-1.png)
+
 # Pre-requisites 
 - Working K8s cluster
 - Cert-manager deployed for certificates generation by Jaeagr operator
