@@ -70,7 +70,7 @@ func initMongoDB(ctx context.Context) {
 	defer span.End()
 	var err error
 	// Replace with your MongoDB connection string
-	mongoURI := "mongodb://localhost:27017"
+	mongoURI := os.Getenv("MONGO_URI")
 	mongoClient, err = mongo.Connect(ctx, options.Client().ApplyURI(mongoURI))
 	if err != nil {
 		log.Fatalf("Failed to connect to MongoDB: %v", err)
